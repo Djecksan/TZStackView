@@ -131,7 +131,7 @@ public class TZStackView: UIView {
         addHiddenListener(arrangedSubview)
     }
 
-    func hiddenAnimationStopped() {
+    @objc func hiddenAnimationStopped() {
         var queueEntriesToRemove = [TZAnimationDidStopQueueEntry]()
         for entry in animationDidStopQueueEntries {
             let view = entry.view
